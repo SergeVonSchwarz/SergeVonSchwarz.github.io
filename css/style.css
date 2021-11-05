@@ -1,0 +1,182 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  background: #f8f7f7;
+  color: #545353;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts img {
+  height: 20px;
+  position: relative;
+  top: 3px;
+  margin: 0 10px;
+}
+
+.lang {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lang span {
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  background: #bdbcbc;
+  color: #fdf4e4;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner-text h1 span {
+  font-weight: 600;
+}
+
+.banner-image img {
+  height: 150px;
+}
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 50vh;
+}
+
+#content > div {
+  margin-bottom: 20px;
+}
+
+#content h1 {
+  font-size: 2em;
+  padding: 20px 0;
+  font-weight: 600;
+}
+
+#content h3 {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 20px 20px 2px 20px;
+  border-bottom: 1px solid #bdbcbc;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.list img {
+  height: 200px;
+  display: block;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+#blackout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: black;
+  z-index: 3;
+  opacity: 0.7;
+}
+
+#box {
+  position: absolute;
+  height: 90vh;
+  top: 50px;
+  left: 50%;
+  background: white;
+  z-index: 14;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#box img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    display: block;
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text h3 {
+    font-size: 1rem;
+  }
+
+  #content {
+    padding: 0 10px;
+  }
+
+  #content h1 {
+    font-size: 1.5rem;
+  }
+
+  #content h3 {
+    font-size: 1.2rem;
+    padding: 10px 10px 1px 10px;
+  }
+}
