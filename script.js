@@ -1,4 +1,4 @@
-let check = false
+let isMobile = false
 ;(function (a) {
   if (
     /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
@@ -8,10 +8,37 @@ let check = false
       a.substr(0, 4)
     )
   )
-    check = true
+    isMobile = true
 })(navigator.userAgent || navigator.vendor || window.opera)
 
-if (!check) {
+if (!isMobile) {
+  for (let i = 0; i < data.length; i++) {
+    let block = document.createElement("div")
+    block.classList.add("block")
+
+    let boxName = document.createElement("h1")
+    boxName.innerHTML = data[i].boxName
+    block.appendChild(boxName)
+
+    let catItems = data[i].items
+    for (let j = 0; j < catItems.length; j++) {
+      let catName = document.createElement("h3")
+      catName.innerHTML = catItems[j].categoryName
+      block.appendChild(catName)
+
+      let catImages = catItems[j].categoryItems
+      let list = document.createElement("div")
+      list.classList.add("list")
+      for (let x = 0; x < catImages.length; x++) {
+        let image = new Image()
+        image.src = catImages[x].src
+        list.appendChild(image)
+      }
+      block.appendChild(list)
+    }
+    content.appendChild(block)
+  }
+
   content.addEventListener("click", (e) => {
     if (!e.target.src) return
 
