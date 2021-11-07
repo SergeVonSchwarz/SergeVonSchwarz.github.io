@@ -36,6 +36,19 @@ const data = [
           { src: "./images/baskets/b19.jpg" },
         ],
       },
+      {
+        categoryName: "Shelves",
+        categoryItems: [
+          { src: "./images/baskets/bm1.jpg" },
+          { src: "./images/baskets/bm2.jpg" },
+          { src: "./images/baskets/bm3.jpg" },
+          { src: "./images/baskets/bm4.jpg" },
+          { src: "./images/baskets/bm5.jpg" },
+          { src: "./images/baskets/bm6.jpg" },
+          { src: "./images/baskets/bm7.jpg" },
+          { src: "./images/baskets/bm8.jpg" },
+        ],
+      },
     ],
   },
   {
@@ -75,6 +88,13 @@ const data = [
           { src: "./images/armchairs/colonel/2.jpg" },
           { src: "./images/armchairs/colonel/3.jpg" },
           { src: "./images/armchairs/colonel/4.jpg" },
+        ],
+      },
+      {
+        categoryName: "Demerzel",
+        categoryItems: [
+          { src: "./images/armchairs/demerzel/1.jpg" },
+          { src: "./images/armchairs/demerzel/2.jpg" },
         ],
       },
     ],
