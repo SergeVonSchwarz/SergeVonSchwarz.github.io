@@ -52,7 +52,7 @@ const data = [
     ],
   },
   {
-    boxName: "Armchairs",
+    boxName: "Rocking chairs",
     items: [
       {
         categoryName: "Opium",
