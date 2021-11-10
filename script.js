@@ -11,34 +11,34 @@ let isMobile = false
     isMobile = true
 })(navigator.userAgent || navigator.vendor || window.opera)
 
-if (!isMobile) {
-  for (let i = 0; i < data.length; i++) {
-    let block = document.createElement("div")
-    block.classList.add("block")
+for (let i = 0; i < data.length; i++) {
+  let block = document.createElement("div")
+  block.classList.add("block")
 
-    let boxName = document.createElement("h1")
-    boxName.innerHTML = data[i].boxName
-    block.appendChild(boxName)
+  let boxName = document.createElement("h1")
+  boxName.innerHTML = data[i].boxName
+  block.appendChild(boxName)
 
-    let catItems = data[i].items
-    for (let j = 0; j < catItems.length; j++) {
-      let catName = document.createElement("h3")
-      catName.innerHTML = catItems[j].categoryName
-      block.appendChild(catName)
+  let catItems = data[i].items
+  for (let j = 0; j < catItems.length; j++) {
+    let catName = document.createElement("h3")
+    catName.innerHTML = catItems[j].categoryName
+    block.appendChild(catName)
 
-      let catImages = catItems[j].categoryItems
-      let list = document.createElement("div")
-      list.classList.add("list")
-      for (let x = 0; x < catImages.length; x++) {
-        let image = new Image()
-        image.src = catImages[x].src
-        list.appendChild(image)
-      }
-      block.appendChild(list)
+    let catImages = catItems[j].categoryItems
+    let list = document.createElement("div")
+    list.classList.add("list")
+    for (let x = 0; x < catImages.length; x++) {
+      let image = new Image()
+      image.src = catImages[x].src
+      list.appendChild(image)
     }
-    content.appendChild(block)
+    block.appendChild(list)
   }
+  content.appendChild(block)
+}
 
+if (!isMobile) {
   content.addEventListener("click", (e) => {
     if (!e.target.src) return
 
