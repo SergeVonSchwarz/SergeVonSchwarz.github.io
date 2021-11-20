@@ -1,6 +1,8 @@
 let isMobile = false
 let data = {}
 let defaultLang = "en"
+detectMobile()
+addItemsEvents()
 init()
 
 lang.addEventListener("click", (e) => {
@@ -18,8 +20,6 @@ lang.addEventListener("click", (e) => {
 function init() {
   setLangData()
   buildItems()
-  detectMobile()
-  addItemsEvents()
 }
 
 function setLangData() {
@@ -27,26 +27,27 @@ function setLangData() {
 }
 
 function addItemsEvents() {
+  const listener = function (e) {
+    if (!e.target.src) return
+
+    hideBox()
+    blackout.style.top = `${window.pageYOffset}px`
+    box.style.top = `${window.pageYOffset + 20}px`
+
+    box.innerHTML = ""
+    let img = document.createElement("img")
+    img.src = e.target.src
+    box.appendChild(img)
+
+    box.style.marginLeft = `-${img.clientWidth / 2}px`
+  }
+
   if (!isMobile) {
-    content.addEventListener("click", (e) => {
-      if (!e.target.src) return
+    // content.removeEventListener("click", listener)
+    // blackout.removeEventListener("click", () => hideBox())
 
-      hideBox()
-
-      blackout.style.top = `${window.pageYOffset}px`
-      box.style.top = `${window.pageYOffset + 20}px`
-
-      box.innerHTML = ""
-      let img = document.createElement("img")
-      img.src = e.target.src
-      box.appendChild(img)
-
-      box.style.marginLeft = `-${img.clientWidth / 2}px`
-    })
-
-    blackout.addEventListener("click", () => {
-      hideBox()
-    })
+    content.addEventListener("click", listener)
+    blackout.addEventListener("click", () => hideBox())
   }
 
   function hideBox() {
