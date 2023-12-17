@@ -87,6 +87,20 @@ body {
   margin-bottom: 10px;
 }
 
+#content h4 {
+  display: inline-block;
+  font-size: 0.5em;
+  padding: 5px 10px 3px 10px;
+  margin-bottom: 10px;
+  background: #148d09;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+#content h4.sold {
+  background: #ee3737;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

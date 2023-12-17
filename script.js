@@ -1,18 +1,18 @@
 let isMobile = false
 let data = {}
-let defaultLang = "en"
+let defaultLang = 'en'
 detectMobile()
 addItemsEvents()
 init()
 
-lang.addEventListener("click", (e) => {
-  if (!e.target.getAttribute("data-lang")) return
-  if (e.target.getAttribute("data-lang") === defaultLang) return
+lang.addEventListener('click', (e) => {
+  if (!e.target.getAttribute('data-lang')) return
+  if (e.target.getAttribute('data-lang') === defaultLang) return
 
-  let langs = lang.getElementsByTagName("span")
-  langs[0].classList.toggle("active")
-  langs[1].classList.toggle("active")
-  defaultLang = e.target.getAttribute("data-lang")
+  let langs = lang.getElementsByTagName('span')
+  langs[0].classList.toggle('active')
+  langs[1].classList.toggle('active')
+  defaultLang = e.target.getAttribute('data-lang')
   init()
 })
 ///////////////////////////////////////////////
@@ -34,8 +34,8 @@ function addItemsEvents() {
     blackout.style.top = `${window.pageYOffset}px`
     box.style.top = `${window.pageYOffset + 20}px`
 
-    box.innerHTML = ""
-    let img = document.createElement("img")
+    box.innerHTML = ''
+    let img = document.createElement('img')
     img.src = e.target.src
     box.appendChild(img)
 
@@ -46,36 +46,48 @@ function addItemsEvents() {
     // content.removeEventListener("click", listener)
     // blackout.removeEventListener("click", () => hideBox())
 
-    content.addEventListener("click", listener)
-    blackout.addEventListener("click", () => hideBox())
+    content.addEventListener('click', listener)
+    blackout.addEventListener('click', () => hideBox())
   }
 
   function hideBox() {
-    blackout.classList.toggle("hide")
-    box.classList.toggle("hide")
-    document.body.classList.toggle("hidden")
+    blackout.classList.toggle('hide')
+    box.classList.toggle('hide')
+    document.body.classList.toggle('hidden')
   }
 }
 
 function buildItems() {
-  content.innerHTML = ""
+  content.innerHTML = ''
   for (let i = 0; i < data.length; i++) {
-    let block = document.createElement("div")
-    block.classList.add("block")
+    let block = document.createElement('div')
+    block.classList.add('block')
 
-    let boxName = document.createElement("h1")
+    let boxName = document.createElement('h1')
     boxName.innerHTML = data[i].boxName
     block.appendChild(boxName)
 
     let catItems = data[i].items
     for (let j = 0; j < catItems.length; j++) {
-      let catName = document.createElement("h3")
+      let catName = document.createElement('h3')
       catName.innerHTML = catItems[j].categoryName
       block.appendChild(catName)
 
+      if (catItems[j].categoryStatus) {
+        let catStatus = document.createElement('h4')
+        if (
+          catItems[j].categoryStatus == 'Sold' ||
+          catItems[j].categoryStatus == 'Продано'
+        ) {
+          catStatus.classList.add('sold')
+        }
+        catStatus.innerHTML = catItems[j].categoryStatus
+        block.appendChild(catStatus)
+      }
+
       let catImages = catItems[j].categoryItems
-      let list = document.createElement("div")
-      list.classList.add("list")
+      let list = document.createElement('div')
+      list.classList.add('list')
       for (let x = 0; x < catImages.length; x++) {
         let image = new Image()
         image.src = catImages[x].src

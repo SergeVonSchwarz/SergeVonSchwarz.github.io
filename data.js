@@ -57,6 +57,7 @@ const langData = {
       items: [
         {
           categoryName: 'Opium',
+          categoryStatus: 'Sold',
           categoryItems: [
             { src: './images/armchairs/opium/1.jpg' },
             { src: './images/armchairs/opium/2.jpg' },
@@ -66,6 +67,7 @@ const langData = {
         },
         {
           categoryName: 'Zeppelin',
+          categoryStatus: 'Sold',
           categoryItems: [
             { src: './images/armchairs/zeppelin/1.jpg' },
             { src: './images/armchairs/zeppelin/2.jpg' },
@@ -75,6 +77,7 @@ const langData = {
         },
         {
           categoryName: 'Demiurge',
+          categoryStatus: 'Sale',
           categoryItems: [
             { src: './images/armchairs/demiurge/1.jpg' },
             { src: './images/armchairs/demiurge/2.jpg' },
@@ -84,6 +87,7 @@ const langData = {
         },
         {
           categoryName: 'Colonel',
+          categoryStatus: 'Sold',
           categoryItems: [
             { src: './images/armchairs/colonel/1.jpg' },
             { src: './images/armchairs/colonel/2.jpg' },
@@ -93,6 +97,7 @@ const langData = {
         },
         {
           categoryName: 'Gold Dragon',
+          categoryStatus: 'Sale',
           categoryItems: [
             { src: './images/armchairs/dragon/1.jpg' },
             { src: './images/armchairs/dragon/2.jpg' },
@@ -101,6 +106,7 @@ const langData = {
         },
         {
           categoryName: 'Mara',
+          categoryStatus: 'Sale',
           categoryItems: [
             { src: './images/armchairs/mara/1.jpg' },
             { src: './images/armchairs/mara/2.jpg' },
@@ -109,6 +115,7 @@ const langData = {
         },
         {
           categoryName: 'Demerzel',
+          categoryStatus: 'Sold',
           categoryItems: [
             { src: './images/armchairs/demerzel/1.jpg' },
             { src: './images/armchairs/demerzel/2.jpg' },
@@ -175,6 +182,7 @@ const langData = {
       items: [
         {
           categoryName: 'Опиум',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/opium/1.jpg' },
             { src: './images/armchairs/opium/2.jpg' },
@@ -184,6 +192,7 @@ const langData = {
         },
         {
           categoryName: 'Дирижабль',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/zeppelin/1.jpg' },
             { src: './images/armchairs/zeppelin/2.jpg' },
@@ -193,6 +202,7 @@ const langData = {
         },
         {
           categoryName: 'Демиург',
+          categoryStatus: 'Открыто',
           categoryItems: [
             { src: './images/armchairs/demiurge/1.jpg' },
             { src: './images/armchairs/demiurge/2.jpg' },
@@ -202,6 +212,7 @@ const langData = {
         },
         {
           categoryName: 'Старый Хер',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/colonel/1.jpg' },
             { src: './images/armchairs/colonel/2.jpg' },
@@ -211,6 +222,7 @@ const langData = {
         },
         {
           categoryName: 'Золотой Дракон',
+          categoryStatus: 'Открыто',
           categoryItems: [
             { src: './images/armchairs/dragon/1.jpg' },
             { src: './images/armchairs/dragon/2.jpg' },
@@ -219,6 +231,7 @@ const langData = {
         },
         {
           categoryName: 'Мара',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/mara/1.jpg' },
             { src: './images/armchairs/mara/2.jpg' },
@@ -227,6 +240,7 @@ const langData = {
         },
         {
           categoryName: 'Демерзель',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/demerzel/1.jpg' },
             { src: './images/armchairs/demerzel/2.jpg' },
