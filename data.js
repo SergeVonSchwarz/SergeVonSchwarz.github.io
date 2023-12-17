@@ -231,7 +231,7 @@ const langData = {
         },
         {
           categoryName: 'Мара',
-          categoryStatus: 'Продано',
+          categoryStatus: 'Открыто',
           categoryItems: [
             { src: './images/armchairs/mara/1.jpg' },
             { src: './images/armchairs/mara/2.jpg' },
