@@ -77,7 +77,7 @@ const langData = {
         },
         {
           categoryName: 'Demiurge',
-          categoryStatus: 'Sale',
+          categoryStatus: 'Sold',
           categoryItems: [
             { src: './images/armchairs/demiurge/1.jpg' },
             { src: './images/armchairs/demiurge/2.jpg' },
@@ -202,7 +202,7 @@ const langData = {
         },
         {
           categoryName: 'Демиург',
-          categoryStatus: 'Открыто',
+          categoryStatus: 'Продано',
           categoryItems: [
             { src: './images/armchairs/demiurge/1.jpg' },
             { src: './images/armchairs/demiurge/2.jpg' },
